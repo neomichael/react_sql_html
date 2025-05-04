@@ -1,29 +1,33 @@
+import axios from 'axios'
+import { checkPrime, setEngine } from 'crypto'
+
 Step 001. Create you prefer folder name. Under the that folder create server and client subdirectory.
-Step 002. Under server directory and Get into terminal. type npm init -y
+Step 002. Under server directory and Get into terminal. type "npm init -y"
 Step 003. Modify package.json file.
 Step 004. Make these changes.
-  "main": "server.js",
+    "main": "server.js",
     "start": "node index.js",
     "dev": "nodemon server.js"
-Step 005. Create server.js file.
-Step 006. Get into terminal and type npm install express cors nodemon
+Step 005. Create server.js file under server directory.
+Step 006. Get into terminal/under server directory and type "npm install express cors nodemon"
 Step 007. Create server.js
+- - - begin
 const express = require('express')
 const mysql = require('mysql')
 const cors = require('cors')
 const path = require('path')
-const { GiConsoleController } = require('react-icons/gi')
 const app = express()
 
 app.use(express.static(path.join(__dirname, 'public')))
-app.use(cors)
+app.use(cors())
 app.use(express.json())
 
 const port = 5000
+
 const db = mysql.createConnection({
-    host: "192.168.2.30",
+    host: "localhost",
     user: "root",
-    password:"mysqlMic678#",
+    password: "mysqlMic678#",
     database: "sakila"
 })
 
@@ -31,5 +35,59 @@ app.listen(port, ()=>{
     console.log('listening on port 5000')
 })
 
-Switch to terminal window and type following
-npm run dev
+- - - end
+
+Step 008. Switch to terminal window and type following
+"npm run dev"
+
+Step 009. run browser check port
+localhost:5000
+you should "Cannot GET /"
+
+Step010. Download XAMPP
+https://www.apachefriends.org/zh_tw/download.html
+notes: 
+Since there is no php and Apache installed. the purpose
+for this administration tool is for create table with UI Interface.
+So, just forget isTypedArray.
+
+Step011. Create student dateabse in mydb within mysql.
+CREATE DATABASE mydb;
+USE mydb;
+CREATE TABLE stduent_details(
+    id INT PRIMARY KEY auto_increment,
+    name VARCHAR(50),
+    email VARCHAR(50),
+    age INT,
+    gender VARCHAR(50),
+);
+
+Step012. Go into terminal
+cd client directory and type "npx create-react-app"
+
+Step013. Update package.json
+pass the api call from front end to backend.
+simplifying api endpoint urls and.
+install front-end dependencies to enhance your 
+development experience.
+
+{
+    "name": "react_sql_html",
+    "version": "1.0.0",
+    "proxy": "http://localhost:5000",
+    . . . . 
+
+Step013. Install axios to have better front-end
+performance to facilitate http request handling,
+'react-router-dom' for client-side 'bootstrap' to
+leverage pre-made styles and UI components.
+
+
+Step014. Under client subdirectory
+
+Step015. Download and install bootstrap.
+https://www.npmjs.com/package/bootstrap
+
+"npm install axios bootstrap react-router-dom"
+above is not working. no installation results in client directory
+but it is up to date.
