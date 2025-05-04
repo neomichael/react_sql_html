@@ -1,0 +1,35 @@
+Step 001. Create you prefer folder name. Under the that folder create server and client subdirectory.
+Step 002. Under server directory and Get into terminal. type npm init -y
+Step 003. Modify package.json file.
+Step 004. Make these changes.
+  "main": "server.js",
+    "start": "node index.js",
+    "dev": "nodemon server.js"
+Step 005. Create server.js file.
+Step 006. Get into terminal and type npm install express cors nodemon
+Step 007. Create server.js
+const express = require('express')
+const mysql = require('mysql')
+const cors = require('cors')
+const path = require('path')
+const { GiConsoleController } = require('react-icons/gi')
+const app = express()
+
+app.use(express.static(path.join(__dirname, 'public')))
+app.use(cors)
+app.use(express.json())
+
+const port = 5000
+const db = mysql.createConnection({
+    host: "192.168.2.30",
+    user: "root",
+    password:"mysqlMic678#",
+    database: "sakila"
+})
+
+app.listen(port, ()=>{
+    console.log('listening on port 5000')
+})
+
+Switch to terminal window and type following
+npm run dev
