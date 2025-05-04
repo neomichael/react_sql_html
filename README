@@ -111,3 +111,7 @@ Step016. npm start; wait and check the browser react page display
 
 Step017. customize app.js file under client/src directory.
  
+Step018. Create elements subdirectory under client directory.
+Step019. Create Create.jsx, Edit.jsx, Home.jsx, Read.jsx,
+Step020. Complete components function for all these jsx.
+Step021. Update App.js

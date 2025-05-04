@@ -1,10 +1,11 @@
-import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import "bootstrap/dist/css/bootstrap.min.css";
-import Home from "./elements/Home";
-import Create from "./elements/Create";
-import Edit from "./elements/Edit";
-import Read from "./elements/Read";
+import React from "react"
+import {BrowserRouter, Routes, Route} from "react-router-dom"
+import "bootstrap/dist/css/bootstrap.min.css"
+import Home from "./elements/Home"
+import Create from "./elements/Create"
+import Edit from "./elements/Edit"
+import Read from "./elements/Read"
+
 function App() {
   return (
     <BrowserRouter>
@@ -15,7 +16,7 @@ function App() {
         <Route path="/read/:id" element={<Read />} />
       </Routes>
     </BrowserRouter>
-  );
+  )
 }
 
-export default App;
+export default App
