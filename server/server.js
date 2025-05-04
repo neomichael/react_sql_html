@@ -70,7 +70,7 @@ app.delete("/delete/:id", (req, res) => {
   db.query(sql, values, (err, result) => {
     if (err)
       return res.json({ message: "Something unexpected has occured" + err });
-    return res.json({ success: "Student updated successfully" });
+    return res.json({ success: "Student updated successfully." });
   });
 });
 
