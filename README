@@ -5,9 +5,21 @@ Step 001. Create you prefer folder name. Under the that folder create server and
 Step 002. Under server directory and Get into terminal. type "npm init -y"
 Step 003. Modify package.json file.
 Step 004. Make these changes.
-    "main": "server.js",
-    "start": "node index.js",
+{
+  "name": "server",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
     "dev": "nodemon server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
+
 Step 005. Create server.js file under server directory.
 Step 006. Get into terminal/under server directory and type "npm install express cors nodemon"
 Step 007. Create server.js
@@ -37,6 +49,9 @@ app.listen(port, ()=>{
 
 - - - end
 
+Step 007.5 Install mysql under server directory.
+npm install mysql
+
 Step 008. Switch to terminal window and type following
 "npm run dev"
 
@@ -63,9 +78,9 @@ CREATE TABLE stduent_details(
 );
 
 Step012. Go into terminal
-cd client directory and type "npx create-react-app"
+cd client directory and type "npx create-react-app ."
 
-Step013. Update package.json
+Step013. Update client directory package.json
 pass the api call from front end to backend.
 simplifying api endpoint urls and.
 install front-end dependencies to enhance your 
@@ -88,6 +103,11 @@ Step014. Under client subdirectory
 Step015. Download and install bootstrap.
 https://www.npmjs.com/package/bootstrap
 
+by typing in terminal 
+
 "npm install axios bootstrap react-router-dom"
-above is not working. no installation results in client directory
-but it is up to date.
+
+Step016. npm start; wait and check the browser react page display
+
+Step017. customize app.js file under client/src directory.
+
