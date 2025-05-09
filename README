@@ -1,6 +1,3 @@
-import axios from 'axios'
-import { checkPrime, setEngine } from 'crypto'
-
 Step 001. Create you prefer folder name. Under the that folder create server and client subdirectory.
 Step 002. Under server directory and Get into terminal. type "npm init -y"
 Step 003. Modify package.json file.
